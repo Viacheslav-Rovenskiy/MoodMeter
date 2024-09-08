@@ -47,7 +47,7 @@ def handle_message(update: Update, context: CallbackContext):
     chat_mood = mood_calculator.calculate_weighted_sentiment(message_label, label_score)
 
     # deprecated. need to be removed
-    mood_calculator.save_message(chat_id, message_label, label_score, chat_mood, message_datetime)
+    # mood_calculator.save_message(chat_id, message_label, label_score, chat_mood, message_datetime)
 
     save_message_to_sql(chat_id=chat_id,
                         user_id=user.id,
